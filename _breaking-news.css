@@ -1,0 +1,157 @@
+/* BREAKING NEWS SECTION */
+.post-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "a a b"
+      "c c c";
+    border: none;
+    padding-bottom: 10px;
+    margin-bottom: 1%;
+    border-bottom: 1px solid gray;
+  }
+  
+  .post-image {
+    grid-area: a;
+    width: 100;
+    display: flex;
+  }
+  .post-textbox {
+    grid-area: b;
+    color: #000;
+    padding-left: 8px;
+    padding-top: 5px;
+  }
+  .post-content {
+    text-decoration: none;
+    color: #000;
+  }
+  .post-content h2 {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  .post-content p {
+    font-size: 11px;
+    margin-bottom: 40%;
+  }
+  .post-list {
+    grid-area: c;
+    margin-left: 15px;
+    margin-top: 10px;
+    display: flex;
+  }
+  .post-list li {
+    margin-right: 15px;
+  }
+  .post-list li:last-of-type {
+    margin-right: 0;
+  }
+  .post-list li a {
+    display: flex;
+    width: 100%;
+    font-size: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  .info-meta {
+    display: flex;
+    height: 9px;
+    width: 100%;
+    font-size: 8px;
+    color: gray;
+  }
+  .info-meta span {
+    font-size: 8px;
+    padding-right: 3px;
+  }
+  .info-meta-locator {
+    border-left: 1px solid gray;
+    color: gray;
+    padding-left: 2px;
+  }
+  .fa-message {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 600px) {
+    .post-list li {
+      margin-right: 4%;
+    }
+    .post-content p {
+      margin-bottom: 40%;
+    }
+  }
+  @media screen and (min-width: 601px) and (max-width: 990px) {
+    .post-container {
+      width: 90%;
+      grid-template-areas: "a a b" "a a c";
+    }
+    .post-content h2 {
+      font-size: 18px;
+    }
+    .post-content p {
+      font-size: 14px;
+      margin-bottom: 10%;
+    }
+    .post-list {
+      flex-direction: column;
+    }
+    .post-list li a {
+      font-size: 12px;
+    }
+    .info-meta {
+      font-size: 12px;
+      height: 12px;
+    }
+    .info-meta span {
+      font-size: 12px;
+    }
+  }
+  @media screen and (min-width: 990px) {
+    .post-container {
+      padding: 0;
+      width: 75%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "a  a b"
+        "a  a c";
+      border: none;
+      margin-bottom: 2%;
+    }
+    .post-image {
+      grid-area: a;
+      width: 100%;
+    }
+    .post-list {
+      grid-area: c;
+      width: 94%;
+      padding-left: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    .post-textbox {
+      display: flex;
+      flex-direction: column;
+    }
+    .post-textbox h2 {
+      font-size: 22px;
+    }
+    .post-textbox p {
+      font-size: 16px;
+      margin-bottom: 10%;
+    }
+  
+    .post-list li a {
+      font-size: 14px;
+    }
+  
+    .info-meta {
+      font-size: 14px;
+      height: 15px;
+    }
+    .info-meta span {
+      font-size: 14px;
+    }
+  }
+  
